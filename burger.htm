@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burger Farm</title>
+
+    <!-- Website Icon Linked Here -->
+    <link rel="website icon" type="png" href="/images/burger website icon 1.png" />
+
+    <!-- CSS File Linked Here -->
+    <link rel="stylesheet" href="/burger.css" />
+</head>
+
+<body>
+    <!-- Home Delivery, Contact Navbar -->
+    <nav>
+        <div class="navbar">
+            <div class="homeDeliveryWrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#fff" class="bi bi-bicycle"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M4 4.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1v.5h4.14l.386-1.158A.5.5 0 0 1 11 4h1a.5.5 0 0 1 0 1h-.64l-.311.935.807 1.29a3 3 0 1 1-.848.53l-.508-.812-2.076 3.322A.5.5 0 0 1 8 10.5H5.959a3 3 0 1 1-1.815-3.274L5 5.856V5h-.5a.5.5 0 0 1-.5-.5m1.5 2.443-.508.814c.5.444.85 1.054.967 1.743h1.139zM8 9.057 9.598 6.5H6.402zM4.937 9.5a2 2 0 0 0-.487-.877l-.548.877zM3.603 8.092A2 2 0 1 0 4.937 10.5H3a.5.5 0 0 1-.424-.765zm7.947.53a2 2 0 1 0 .848-.53l1.026 1.643a.5.5 0 1 1-.848.53z" />
+                </svg>
+                <h6>HOME DELIVERY</h6>
+
+                <a href="tel:+911234567890">
+                    <p>+91 - 12345 67890</p>
+                </a>
+            </div>
+
+            <!-- Navigation Bar -->
+            <div class="navbarWrap">
+                <!-- logo -->
+                <div class="logoWrap">
+                    <a href="#">
+                        <img src="/images/burger logo 3.png" alt="Burger Logo" />
+                        <h3>FARM</h3>
+                    </a>
+                </div>
+
+                <!-- Navbar Menu -->
+                <div class="navMenu">
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#menuSection">MENU</a></li>
+                        <li><a href="#ourStory">ABOUT</a></li>
+                        <li><a href="#footer">CONTACT</a></li>
+                        <li><a href="./ordersPage.htm" target="_blank">ORDERS</a></li>
+                        <li><a href="./bookedTablePage.htm" target="_blank">BOOKED TL</a></li>
+                        <li><a href="https://maaz-ansari-portfolio.netlify.app/" target="_blank">PORTFOLIO</a></li>
+                    </ul>
+                </div>
+
+                <!-- hamburger -->
+                <div class="hamburgerWrap">
+                    <div class="open" id="openList" onclick="clickopen(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-list"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                        </svg>
+                    </div>
+                    <div class="close" id="closeList" onclick="clickclose(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-x"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Dropdown Menu List -->
+                <div class="dropDownNavMenu" id="dropDownNavMenu-list">
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#menuSection">MENU</a></li>
+                        <li><a href="#ourStory">ABOUT</a></li>
+                        <li><a href="#footer">CONTACT</a></li>
+                        <li><a href="./ordersPage.htm" target="_blank">ORDERS</a></li>
+                        <li><a href="./bookedTablePage.htm" target="_blank">BOOKED TL</a></li>
+                        <li><a href="https://maaz-ansari-portfolio.netlify.app/" target="_blank">PORTFOLIO</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Intro Section Started Here -->
+    <section>
+        <div class="introWrap">
+            <div class="introContent">
+                <h1>BURGER</h1>
+                <h6>JUICY, FRESH AND DELICIOUS</h6>
+                <input class="introOrderBotton" type="submit" value="ORDER NOW" onclick="openOrderForm()" />
+            </div>
+
+
+            <div class="orderFormWrap" id="orderFormWrapper">
+                <form class="orderFormContainer" id="orderForm">
+
+                    <div class="closeOrderFormIconWrap" onclick="closeOrderForm()">
+                        <input type="button" value="X">
+                    </div>
+
+                    <h2>Your Dream Order</h2>
+
+                    <div id="itemFields">
+                        <!-- Initial fields -->
+                        <div class="itemField">
+                            <label for="burger">Select Order: </label>
+                            <select name="items[0][burger]" required>
+                                <option value="">Select</option>
+                                <option value="Chicken Burger">Chicken Burger</option>
+                                <option value="Maharaja MAC Cheese Burger">Maharaja MAC Cheese Burger</option>
+                                <option value="Crispy MC Junior">Crispy MC Junior</option>
+                            </select>
+
+                            <label for="itemQuantity">Quantity: </label>
+                            <input id="itemQuantities" type="number" min="1" max="20" name="items[0][itemQuantity]"
+                                value="1" required>
+
+                            <hr>
+                        </div>
+                    </div>
+
+
+                    <input id="addItemButton" class="addItemButton" type="button" value="Add Item" onclick="addItem()">
+
+                    <div class="orderPriceWrap">
+                        <label for="orderPrice">Price: </label>
+                        <span>
+                            <p id="orderPrice">0</p>$
+                        </span>
+                    </div>
+
+
+                    <label for="address">Address: </label>
+                    <input type="text" name="address" minlength="40" maxlength="80" placeholder="address..." required>
+
+                    <label for="phoneNumber">Phone No.: </label>
+                    <input type="tel" name="phoneNumber" minlength="10" maxlength="10" placeholder="9876543210"
+                        required>
+
+                    <input class="closeOrderFormButton" type="button" value="Close" onclick="closeOrderForm()">
+                    <input class="placeOrderButton" type="submit" value="Place Order">
+                </form>
+            </div>
+
+            <!-- order placed message -->
+            <div class="orderPlaced" id="orderPlaced">
+                <h2>Order Placed Successfully!</h2>
+                <p>Thank you for your order!</p>
+
+                <input type="button" value="Okay" onclick="closeOrderPlaced()">
+            </div>
+
+            <div class="introBurgerWrap">
+                <img src="/images/intro burger 4.png" alt="Intro Burger" />
+
+                <!-- Offer Tag -->
+                <div class="offerTag">
+                    <p>
+                        RS 280 <br />
+                        ONLY
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Section Started Here -->
+    <section>
+        <div class="trendingWrap">
+            <div class="trendColumn1">
+                <span>TRY TODAY</span>
+                <h3>
+                    MOST POPULAR THIS <br />
+                    WEEK
+                </h3>
+            </div>
+            <div class="trendColumn2">
+                <div class="tryBurger1">
+                    <span>TRY TODAY</span>
+                    <h3>CHICKEN MAHARAJA</h3>
+                </div>
+                <div class="tryBurger2">
+                    <span>TRY TODAY</span>
+                    <div id="menuSection"></div>
+                    <h3>
+                        SMOKING HOT AND <br />
+                        CRISPY
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Burger Product Section Started Here -->
+    <section>
+        <div class="productWrap">
+            <div class="productHead">
+                <h1>GRAB YOU BURGER</h1>
+                <p>
+                    "Savor the flavor in every bite with our made-to-order burger.
+                    <br />crafted from the freshest ingredients for a taste that can't
+                    be beat."
+                </p>
+            </div>
+
+            <div class="burgerItemWrap">
+                <div class="burgerItem">
+                    <img src="/images/chrispy mc junior.png" alt="Fresh Beef Burger" />
+
+                    <div class="burgerDetails">
+                        <a href="#">
+                            <h3>CHICKEN BURGER</h3>
+                            <p>
+                                Crispy seasoned chicken breat, topped with mandatory melted
+                                cheese, piled onto soft rolls with onion, avocade, lettuce,
+                                tomato and garlic mayo.
+                            </p>
+                        </a>
+                    </div>
+                    <input class="burgerOrderButton" type="button" value="ORDER NOW" onclick="openOrderForm()" />
+                </div>
+
+                <div class="burgerItem">
+                    <img src="/images/maharaja burger.png" alt="Fresh Beef Burger" />
+
+                    <div class="burgerDetails">
+                        <a href="#">
+                            <h3>MAHARAJA MAC CHEESE</h3>
+                            <p>
+                                The chunky juisy grilled chicken patty is filled with fresh
+                                and premium ingredients such as jalapanu, onion, cheddar,
+                                cheese, tomatoes and crunchy lettuce dressed with the
+                                classical Habanero sauce.
+                            </p>
+                        </a>
+                    </div>
+                    <input class="burgerOrderButton" type="button" value="ORDER NOW" onclick="openOrderForm()" />
+                </div>
+
+                <div class="burgerItem">
+                    <img src="/images/chicken mayonnaise burger.png" alt="Fresh Beef Burger" />
+
+                    <div class="burgerDetails">
+                        <a href="#">
+                            <h3>CHRISPY MC JUNIOR</h3>
+                            <p>
+                                White meat chicken filet, seasoned and breaded and carefully
+                                layered with fresh lettuce, ripe tomato and creamy mayonnaise
+                                on a potato bun.
+                            </p>
+                        </a>
+                    </div>
+                    <div id="ourStory"></div> <!-- redirect the "Our Story Sectrion" -->
+                    <input class="burgerOrderButton" type="button" value="ORDER NOW" onclick="openOrderForm()" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section Started Here -->
+    <section>
+        <div class="storyContainer">
+            <div class="storyDetails">
+                <h1>OUR STORY</h1>
+                <p>
+                    Our burger restaurant has a rich history that dates back to 1989. It
+                    all started with passion for creating the perfect burger, using only
+                    the freshet and finest ingredients. Our founder Jeff Wilson, was a
+                    true foodie at heart and had a love for experimenting with
+                    differentflovors and ingredients. He spent countless hours
+                    perfecting the art to burger making, and his dedication paid off.
+                    Today, our restaurant has become a staple in the community and a
+                    go-to spot for burgers lovers everywhere.
+                </p>
+            </div>
+            <div class="storyImage"></div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section Started Here -->
+    <section>
+        <div class="bookingWrap">
+            <div class="bookingHeadWrap">
+                <h1>BOOK YOUR TABLE</h1>
+                <p>
+                    Indulge in a flavorful adventire with every bite, select your table
+                    now at Burger Restautant.
+                </p>
+            </div>
+
+
+            <div class="formWrap">
+                <form id="bookTableForm" class="bookTableForm">
+                    <div>
+                        <input type="text" id="name" name="Name" placeholder="NAME" />
+                        <span id="nameError" class="error"></span>
+                    </div>
+                    <div>
+                        <input type="text" id="phoneNumber" name="PhoneNumber" placeholder="Phone Number" />
+                        <span id="phoneError" class="error"></span>
+                    </div>
+                    <div>
+                        <input type="date" id="date" name="Date" placeholder="DATE" />
+                        <span id="dateError" class="error"></span>
+                    </div>
+                    <div>
+                        <input type="time" id="time" name="Time" placeholder="TIME" />
+                        <span id="timeError" class="error"></span>
+                    </div>
+                    <div>
+                        <input type="number" id="guests" name="NoOfGuest" placeholder="NO. OF GUEST" />
+                        <span id="guestsError" class="error"></span>
+                    </div>
+                    <div>
+                        <input type="number" id="children" name="NoOfChildren" placeholder="NO. OF CHILDREN" />
+                        <span id="childrenError" class="error"></span>
+                    </div>
+                    <div class="bookingButtonWrap">
+                        <input class="bookingSubmitBtn" type="submit" value="SUBMIT" />
+                        <input class="bookingResetBtn" type="reset" value="RESET">
+                    </div>
+                </form>
+            </div>
+
+            <div class="tableBooked" id="tableBooked">
+                <h2>Table Booked Successfully!</h2>
+                <p>Thank you for your Booking!</p>
+
+                <input type="button" value="Okay" onclick="closeTableBooked()">
+            </div>
+            
+
+        </div>
+    </section>
+
+    <!-- Footer Section Started Here -->
+    <footer id="footer">
+        <div class="footerWrap">
+            <div class="companyLogoWrap">
+                <a href="#">
+                    <img src="/images/burger logo 3.png" alt="Company Logo" />
+                    <h3>FARM</h3>
+                </a>
+            </div>
+
+            <div class="companyDetailsWrap">
+                <div class="companyDetails">
+                    <p>
+                        Our burger Restaurant has a rich history that dates back to 1989.
+                        It all started with passion for creating the perfect burger, using
+                        only the freshest and finest ingredient.
+                    </p>
+                </div>
+
+                <div class="companyContactWrap">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff"
+                            class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                        </svg>
+                        <p>#1 Streat, Maharashtra</p>
+                    </a>
+
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff"
+                            class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+                        </svg>
+                        <p>info@burgerfarm.com</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="copyrightWrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-c-circle"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512" />
+                </svg>
+                <p>Burger Farm 2024. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/burger.js"></script>
+</body>
+
+</html>

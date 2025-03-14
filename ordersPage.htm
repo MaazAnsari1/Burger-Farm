@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Farm | Customer Orders</title>
+    <style>
+        /* Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .total {
+            font-weight: bold;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>All Orders</h1>
+    <div id="ordersContainer">
+        <!-- Orders will be displayed here -->
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Retrieve the orders from localStorage
+            const orders = JSON.parse(localStorage.getItem('orders')) || [];
+// console.log(orders)
+            const ordersContainer = document.getElementById('ordersContainer');
+
+            if (orders.length > 0) {
+                let ordersHtml = `
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Burger</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Total Price</th>
+                                <th>Address</th>
+                                <th>Phone Number</th>
+                                <th>Order Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                `;
+
+                orders.forEach(order => {
+                    order.orderDetails.forEach((item, index) => {
+                        ordersHtml += `
+                            <tr>
+                                ${index === 0 ? `<td rowspan="${order.orderDetails.length}">${order.id}</td>` : ''}
+                                ${index === 0 ? `<td rowspan="${order.orderDetails.length}">${order.date}</td>` : ''}
+                                ${index === 0 ? `<td rowspan="${order.orderDetails.length}">${order.time}</td>` : ''}
+                                <td>${item.burger}</td>
+                                <td>${item.quantity}</td>
+                                <td>${item.price.toFixed(2)} $</td>
+                                <td>${item.totalPrice.toFixed(2)} $</td>
+                                ${index === 0 ? `<td rowspan="${order.orderDetails.length}">${order.address}</td>` : ''}
+                                ${index === 0 ? `<td rowspan="${order.orderDetails.length}">${order.phoneNumber}</td>` : ''}
+                                ${index === 0 ? `<td rowspan="${order.orderDetails.length}" class="total">${order.finalTotalPrice} $</td>` : ''}
+                            </tr>
+                        `;
+                    });
+                });
+
+                ordersHtml += `
+                        </tbody>
+                    </table>
+                `;
+
+                ordersContainer.innerHTML = ordersHtml;
+            } else {
+                ordersContainer.innerHTML = '<p>No orders found.</p>';
+            }
+        });
+    </script>
+</body>
+</html>

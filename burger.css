@@ -1,0 +1,1541 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'League Spartan', sans-serif;
+    letter-spacing: 0.5px;
+    word-spacing: 0.5px;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0px 10px;
+    background-image: linear-gradient(to right, rgb(58, 15, 15) 40%, rgb(213, 117, 0) 70%, rgb(58, 15, 15) );
+    z-index: 100;
+    position: fixed;
+}
+
+/* Home Delivery, Contact Navbar */
+.homeDeliveryWrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: end;
+    padding: 5px 60px;
+    line-height: 1px;
+}
+
+.homeDeliveryWrap h6 {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'League Spartan', sans-serif;
+    padding: 8px 0px 0px;
+    color: #fff;
+}
+
+.homeDeliveryWrap a {
+    text-decoration: none;
+}
+
+.homeDeliveryWrap a p {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'League Spartan', sans-serif;
+    padding: 8px 0px 0px;
+    color: #ddd;
+    transition: 0.2s;
+}
+
+.homeDeliveryWrap a p:hover,
+.homeDeliveryWrap a p:active,
+.homeDeliveryWrap a p:focus {
+    color: yellow;
+}
+
+
+/* Navigation Bar */
+.navbarWrap {
+    display: flex;
+    padding: 5px 60px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* logo */
+.logoWrap {
+    display: flex;
+}
+
+.logoWrap a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logoWrap img {
+    height: 50px;
+    width: auto;
+}
+
+.logoWrap h3 {
+    font-size: 30px;
+    font-weight: 300;
+    font-family: 'League Spartan', sans-serif;
+    color: #fff;
+}
+
+/* Navbar Menu */
+.navMenu {
+    display: flex;
+}
+
+.navMenu ul {
+    display: flex;
+    flex-direction: row;
+    column-gap: 60px;
+    list-style: none;
+    transition: 0.3s;
+    position: relative;
+}
+
+.navMenu ul li {
+    position: relative;
+}
+
+.navMenu ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'League Spartan', sans-serif;
+    color: #ddd;
+    transition: 0.3s;
+}
+
+.navMenu ul li a:hover,
+.navMenu ul li a:active,
+.navMenu ul li a:focus {
+    color: #fff;
+}
+
+.navMenu ul li a::after {
+    content: " ";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+}
+
+.navMenu ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+/* hamburger */
+.hamburgerWrap {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.open {
+    display: flex;
+    padding: 5px;
+    background-color: #000;
+    transition: 0.3s;
+}
+
+.close {
+    display: none;
+    padding: 5px;
+    background-color: #000;
+    transition: 0.3s;
+}
+
+/* Dropdown Menu List */
+.dropDownNavMenu {
+    display: none;
+    position: absolute;
+    right: 60px;
+    top: 105px;
+    background-color: #000;
+    padding: 30px 40px;
+    border: none;
+    border-radius: 5px 0px 5px 5px;
+    transition: 0.3s;
+    z-index: 100;
+}
+
+.dropDownNavMenu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: center;
+}
+
+.dropDownNavMenu ul li {
+    display: flex;
+    justify-content: center;
+}
+
+.dropDownNavMenu ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #616265;
+    transition: 0.2s;
+}
+
+.dropDownNavMenu ul li a:hover,
+.dropDownNavMenu ul li a:active,
+.dropDownNavMenu ul li a:focus {
+    color: #fff;
+}
+
+
+
+/* Intro Section Started Here */
+.introWrap {
+    background-image: linear-gradient(to right, rgb(58, 15, 15) 40%, rgb(213, 117, 0) 70%, rgb(58, 15, 15) );
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding: 120px 0px 0px;
+}
+
+.introContent {
+    padding: 150px 50px;
+}
+
+.introContent h1 {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: clamp(5.25rem, 10vw, 9.375rem);
+    font-weight: 600;
+    line-height: 110px;
+    color: #fff;
+}
+
+.introContent h6 {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: clamp(1.5625rem, 3.5vw, 3.125rem);
+    font-weight: 300;
+    color: #fff;
+}
+
+.introOrderBotton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1rem, 2.5vw, 2.125rem);
+    font-weight: 500;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 25px;
+    background-color: rgb(255, 183, 0);
+    cursor: pointer;
+    margin: 60px 0px 0px 80px;
+}
+
+/* here code for order form  */
+
+.orderFormWrap {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid #616265;   
+    transform: translate(-50%, -50%);
+    z-index: 9;
+}
+
+.closeOrderFormIconWrap {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    border: none;
+}
+
+.closeOrderFormIconWrap:hover {
+    opacity: 0.9;
+}
+
+.closeOrderFormIconWrap input {
+    background-color: rgb(150, 16, 16);
+    color: #fff;
+    border: none;
+    width: 40px;
+}
+
+.orderFormContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width: 450px;
+    overflow: auto !important;
+    max-height: 400px !important;
+}
+
+.orderFormContainer h2 {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0px 0px 10px;
+}
+
+.orderFormContainer label {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0px 0px 8px;
+}
+
+.orderFormContainer select {
+    font-size: 16px;
+    font-weight: 500;
+    height: 40px;
+    width: 100%;
+    margin: 0px 0px 15px;
+    padding: 10px 7px 10px;
+    border: 1px solid #000;
+    border-radius: 6px;
+}
+
+.orderFormContainer input {
+    font-size: 16px;
+    font-weight: 500;
+    height: 40px;
+    margin: 0px 0px 15px;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 6px;
+}
+
+.orderFormContainer input:last-child {
+    margin: 0px 0px 0px;
+}
+
+.addItemButton {
+    background-color: #00aeff;
+}
+
+.addItemButton:hover {
+    opacity: 0.9;
+}
+
+.closeOrderFormButton {
+    background-color: rgb(150, 16, 16);
+    color: #fff;
+}
+
+.closeOrderFormButton:hover {
+    opacity: 0.9;
+}
+
+.placeOrderButton {
+    background-color: rgb(255, 183, 0);
+}
+
+.placeOrderButton:hover {
+    opacity: 0.9;
+}
+
+.itemField {
+    margin: 10px 0px;
+}
+
+.orderPriceWrap {
+    display: flex;
+    gap: 10px;
+    margin: 0px 0px 10px;
+}
+
+.orderPriceWrap label {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.orderPriceWrap span {
+    display: flex;
+    gap: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: yellow;
+}
+
+
+
+/* order placed message */
+.orderPlaced {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #616265;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+}
+
+.orderPlaced h2 {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0px 0px 5px;
+}
+
+.orderPlaced p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px 0px 20px;
+}
+
+.orderPlaced input {
+    background-color: rgb(255, 183, 0);
+    border: none;
+    border-radius: 20px;
+    padding: 7px 20px;
+    font-size: 16px;
+    height: 40px;
+}
+
+
+.introBurgerWrap {
+    display: flex;
+    position: relative;
+}
+
+.introBurgerWrap img {
+    position: absolute;
+    width: 95%;
+    height: auto;
+}
+
+/* Offer Tag */
+.offerTag {
+    position: absolute;
+    padding: 5px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(150, 16, 16);
+    top: 310px;
+    left: 100px;
+}
+
+.offerTag p {
+    font-size: clamp(10px, 1.5vw, 20px);
+    font-weight: 600;
+    font-family: 'League Spartan', sans-serif;
+    color: #fff;
+    padding: 20px 10px;
+    border: 2px dashed #fff;
+    border-radius: 50%;
+}
+
+/* Trending Section Started Here */
+.trendingWrap {
+    display: grid;
+    grid-template-columns: 58% 40%;
+    column-gap: 2%;
+    margin: 120px 50px 50px;
+}
+
+/* trending Burger Coloumn 1 */
+.trendColumn1 {
+    background:  linear-gradient(to right, #000 5%, rgba(0, 0, 0, 0) 95%), url(/images/burger\ background\ 1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding: 30px 30px 250px;
+    border: none;
+    border-radius: 20px;
+}
+
+.trendColumn1 span {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.trendColumn1 h3 {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+
+/* Trending Burger Column 2 */
+.trendColumn2 {
+    display: grid;
+    grid-template-rows: 44% 44%;
+    row-gap: 12%;
+}
+
+.tryBurger1 {
+    background:  linear-gradient(to left, #000 5%, rgba(255, 255, 255, 0) 95%), url(/images/burger\ background\ 2.jpg);
+    background-repeat: repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-radius: 20px;
+    align-items: end;
+}
+
+
+.tryBurger1 span {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.tryBurger1 h3 {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.tryBurger2 {
+    background:  linear-gradient(to right, #000 5%, rgba(255, 255, 255, 0) 95%), url(/images//burger\ background\ 3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.trendColumn2 span {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.trendColumn2 h3 {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+/* Burger Product Section Started Here */
+.productWrap {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 50px 50px;
+}
+
+
+/* Product Section Head */
+.productHead {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productHead h1 {
+    color: rgb(66, 17, 17);
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.productHead p {
+    color: rgb(171, 94, 0);
+    font-size: 30px;
+    text-align: center;
+}
+
+
+/* Burger Item */
+.burgerItemWrap {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    column-gap: 5%;
+}
+
+.burgerItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    padding: 10px;
+}
+
+.burgerItem img {
+    width: 100%;
+    height: auto;
+    /* filter: drop-shadow(0px 5px 10px #000); */
+}
+
+.burgerDetails {
+    display: flex;
+    margin: 40px 0px 0px;
+}
+
+.burgerDetails a {
+    text-decoration: none;
+    text-align: center;
+}
+
+.burgerDetails a h3 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: #000;
+    font-size: 30px;
+    font-weight: 600;
+    height: 70px;
+}
+
+.burgerDetails a p {
+    color: #000;
+    font-size: 18px;
+    font-weight: 200;
+    margin: 20px 0px 0px;
+    text-align: left;
+    height: 100px;
+}
+
+.burgerOrderButton {
+    background-color: orangered;
+    color: #fff;
+    margin: 40px auto 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Story Section Started Here */
+.storyContainer {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    margin: 50px 50px;
+}
+
+.storyDetails {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.storyDetails h1 {
+    font-size: 50px;
+    font-weight: 600;
+    color: rgb(66, 17, 17);
+}
+
+.storyDetails p {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.storyImage {
+    width: 50%;
+    height: auto;
+    background: url(/images/our\ story\ burger.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+}
+
+
+/* Booking Form Section Started Here */
+.bookingWrap {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+}
+
+.bookingHeadWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.bookingHeadWrap h1 {
+    font-size: 50px;
+    font-weight: 600;
+    color: rgb(66, 17, 17);
+}
+
+.bookingHeadWrap p {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+
+.bookTableForm {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: clamp(250px, 50vw, 600px);
+}
+
+/* Input Fields */
+.bookTableForm input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+/* Error Message Styling */
+.error {
+    position: absolute;
+    top: 50px;
+    left: 5px;
+    color: red;
+    font-size: 14px;
+}
+
+/* Input Row */
+.formWrap div {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+/* Submit Button */
+.bookingButtonWrap {
+    text-align: center;
+    column-gap: 20px;
+}
+
+.bookingSubmitBtn {
+    background-color: orangered;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.bookingResetBtn {
+    background-color: #f0f0f0;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .formWrap {
+        width: 90%;
+    }
+
+    .bookTableForm input {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* order placed message */
+.tableBooked {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #616265;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+}
+
+.tableBooked h2 {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0px 0px 5px;
+}
+
+.tableBooked p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px 0px 20px;
+}
+
+.tableBooked input {
+    background-color: rgb(255, 183, 0);
+    border: none;
+    border-radius: 20px;
+    padding: 7px 20px;
+    font-size: 16px;
+    height: 40px;
+}
+
+/* Footer Section Started Here */
+.footerWrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 30px 50px;
+    background: linear-gradient(to bottom, rgba(255, 68, 0, 0.355), rgba(255, 68, 0, 0.355)), url(/images/footer\ burger\ 3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.companyDetailsWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.companyLogoWrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.companyLogoWrap a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.companyLogoWrap a img {
+    width: 80px;
+}
+
+.companyLogoWrap a h3 {
+    font-size: 30px;
+    font-weight: 200;
+    color: #fff;
+}
+
+.companyDetails {
+    display: flex;
+    width: 45%;
+}
+
+.companyDetails p {
+    color: #fff;
+    font-size: 25px;
+}
+
+.companyContactWrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 30%;
+}
+
+.companyContactWrap a {
+    text-decoration: none;
+    display: flex;
+    column-gap: 20px;
+}
+
+.companyContactWrap a p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.copyrightWrap {
+    display: flex;
+    column-gap: 10px;
+    padding: 5px 0px;
+    align-items: center;
+}
+
+.copyrightWrap p {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+/* Media Queries for "Home Delivery Contact Navbar", "Navbar" and "dropDown Navbar Menu List" */
+@media screen and (max-width: 900px) and (min-width: 769px){
+    .navMenu {
+        display: none;
+    }
+
+    .hamburgerWrap {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px){
+    .navMenu {
+        display: none;
+    }
+
+    .hamburgerWrap {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 480px) and (min-width: 280px){
+
+    .homeDeliveryWrap {
+        column-gap: 10px;
+        padding: 5px 20px;
+        margin: 0px 0px 10px;
+    }
+
+    .homeDeliveryWrap svg {
+        height: 25px;
+        width: 25px;
+    }
+
+    .homeDeliveryWrap h6,
+    .homeDeliveryWrap a p {
+        font-size: 12px;
+    }
+
+    .navbarWrap {
+        padding: 5px 20px;
+    }
+
+    .logoWrap a img {
+        height: 30px;
+    }
+
+    .logoWrap a h3 {
+        font-size: 20px;
+    }
+
+    .navMenu {
+        display: none;
+    }
+
+    .hamburgerWrap {
+        display: flex;
+    }
+
+    .open,
+    .close {
+        height: 20px;
+        width: 20px;
+        align-items: center;
+    }
+}
+
+/* Media Queries for Intro section */
+@media screen and (max-width: 1400px) and (min-width: 901px){
+
+    .introWrap {
+        grid-template-columns: 50% 50%;
+    }
+
+    .introContent {
+        padding: 60px 50px;
+    }
+
+    .introBurgerWrap img {
+        width: auto;
+    }
+
+    .offerTag {
+        top: 220px;
+        left: 60px;
+    }
+}
+
+@media screen and (max-width: 900px) and (min-width: 769px){
+
+    .introWrap {
+        grid-template-columns: 50% 50%;
+    }
+
+    .introContent {
+        padding: 60px 50px;
+    }
+
+    .introBurgerWrap img {
+        width: 90%;
+    }
+
+    .offerTag {
+        top: 190px;
+        left: 60px;
+    }
+
+    .offerTag p {
+        padding: 16px 10px;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px){
+    .introWrap {
+        grid-template-columns: 60% 40%;
+    }
+
+    .introContent {
+        padding: 30px 50px;
+    }
+
+    .introContent h1 {
+        font-size: clamp(2.5rem, 10vw, 5.25rem);
+        line-height: 50px;
+    }
+    
+    .introContent h6 {
+        font-size: clamp(0.8rem, 3.5vw, 1.5625rem);
+    }
+    
+    .introOrderBotton {
+        font-size: clamp(0.5rem, 2.5vw, 1rem);
+        margin: 20px 0px 0px 20px;
+        padding: 5px 10px;
+    }
+
+    .introBurgerWrap img {
+        width: 90%;
+    }
+
+    .offerTag {
+        top: 120px;
+        left: 15px;
+    }
+
+    .offerTag p {
+        font-size: clamp(7px, 1.5vw, 10px);
+        padding: 12px 5px;
+    }
+}
+
+@media screen and (max-width: 480px) and (min-width: 280px){
+    .introWrap {
+        grid-template-columns: 50% 50%;
+    }
+
+    .introContent {
+        padding: 30px 20px;
+    }
+
+    .introContent h1 {
+        font-size: clamp(1.2rem, 10vw, 2.5rem);
+        line-height: 50px;
+    }
+    
+    .introContent h6 {
+        font-size: clamp(0.5rem, 3.5vw, 0.8rem);
+    }
+    
+    .introOrderBotton {
+        font-size: clamp(0.2rem, 2.5vw, 0.5rem);
+        margin: 10px 0px 0px 10px;
+        padding: 5px 10px;
+    }
+
+    .introBurgerWrap img {
+        width: 90%;
+    }
+
+    .offerTag {
+        top: 80px;
+        left: 15px;
+    }
+
+    .offerTag p {
+        font-size: clamp(7px, 1.5vw, 10px);
+        padding: 9px 5px;
+    }
+}
+
+
+/* Trending Section Media Queries Started Here */
+@media screen and (max-width: 1400px) and (min-width: 901px){
+    .trendColumn1 span {
+        font-size: 14px;
+    }
+
+    .trendColumn1 h3 {
+        font-size: 18px;
+    }
+
+    .tryBurger1 span {
+        font-size: 12px;
+    }
+
+    .tryBurger1 h3 {
+        font-size: 16px;
+    }
+
+    .tryBurger2 span {
+        font-size: 12px;
+    }
+
+    .tryBurger2 h3 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 900px) and (min-width: 769px){
+    .trendingWrap {
+        grid-template-columns: 100%;
+        row-gap: 30px;
+    }
+
+    .trendColumn2 {
+        grid-template-columns: 100%;
+        row-gap: 30px;
+    }
+
+    .tryBurger1 {
+        padding: 20px 20px 200px;
+    }
+
+    .tryBurger2 {
+        padding: 20px 20px 200px;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px){
+    .trendingWrap {
+        grid-template-columns: 100%;
+        row-gap: 30px;
+    }
+
+    .trendColumn2 {
+        grid-template-columns: 100%;
+        row-gap: 30px;
+    }
+
+    .tryBurger1 {
+        padding: 20px 20px 200px;
+    }
+
+    .tryBurger2 {
+        padding: 20px 20px 200px;
+    }
+}
+
+@media screen and (max-width: 480px) and (min-width: 280px){
+    .trendingWrap {
+        grid-template-columns: 100%;
+        row-gap: 30px;
+        margin: 100px 20px 20px;
+    }
+
+    .trendColumn1 {
+        padding: 20px 20px 100px;
+    }
+
+    .trendColumn1 span {
+        font-size: 12px;
+    }
+
+    .trendColumn1 h3 {
+        font-size: 16px;
+    }
+
+    .trendColumn2 {
+        grid-template-columns: 100%;
+        row-gap: 30px;
+    }
+
+    .tryBurger1 {
+        padding: 20px 20px 100px;
+    }
+
+    .tryBurger1 span {
+        font-size: 12px;
+    }
+
+    .tryBurger1 h3 {
+        font-size: 16px;
+    }
+
+    .tryBurger2 {
+        padding: 20px 20px 100px;
+    }
+
+    .tryBurger2 span {
+        font-size: 12px;
+    }
+
+    .tryBurger2 h3 {
+        font-size: 16px;
+    }
+}
+
+
+/* Burger Product Section Media Queries Started Here */
+@media screen and (max-width: 1400px) and (min-width: 901px){
+    .burgerDetails a h3 {
+        font-size: 25px;
+    }
+
+    .burgerDetails a p {
+        font-size: 17px;
+        height: 150px;
+    }
+
+    .burgerOrderButton {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 900px) and (min-width: 769px){
+
+    .productWrap {
+        margin: 20px 50px 50px;
+    }
+
+    .productHead h1 {
+        font-size: 35px;
+    }
+
+    .productHead p {
+        font-size: 18px;
+    }
+
+    .burgerItemWrap {
+        grid-template-columns: 47% 47%;
+        column-gap: 6%;
+        row-gap: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px){
+
+    .productWrap {
+        margin: 20px 50px 50px;
+    }
+    
+    .productHead h1 {
+        font-size: 30px;
+    }
+    
+    .productHead p {
+        font-size: 18px;
+    }
+    
+    .burgerItemWrap {
+        grid-template-columns: 47% 47%;
+        column-gap: 6%;
+        row-gap: 50px;
+    }
+
+    .burgerDetails {
+        max-width: 20px 0px 0px;
+    }
+
+    .burgerDetails a h3 {
+        font-size: 20px;
+        height: 50px;
+    }
+
+    .burgerDetails a p {
+        font-size: 16px;
+        height: 90px;
+    }
+
+    .burgerOrderButton {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) and (min-width: 280px){
+
+    .productWrap {
+        margin: 20px;
+    }
+
+    .burgerItemWrap {
+        grid-template-columns: 100%;
+        row-gap: 50px;
+        margin: 20px 0px 0px;
+    }
+
+    .productHead h1 {
+        font-size: 25px;
+    }
+
+    .productHead p {
+        font-size: 16px;
+    }
+
+    .burgerDetails a h3 {
+        font-size: 25px;
+        height: 70px;
+    }
+
+    .burgerDetails a p {
+        font-size: 16px;
+        height: 140px;
+    }
+
+    .burgerOrderButton {
+        font-size: 12px;
+    }
+}
+
+/* Story Section Media Queries Started Here */
+@media screen and (max-width: 1400px) and (min-width: 901px){}
+
+@media screen and (max-width: 900px) and (min-width: 769px){
+    .storyContainer {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .storyDetails {
+        width: 100%;
+    }
+
+    .storyImage {
+        width: 100%;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px){
+    .storyContainer {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .storyDetails {
+        width: 100%;
+    }
+
+    .storyDetails h1 {
+        font-size: 30px;
+    }
+
+    .storyDetails p {
+        font-size: 18px;
+    }
+
+    .storyImage {
+        width: 100%;
+        height: 450px;
+    }
+}
+
+@media screen and (max-width: 480px) and (min-width: 280px){
+    .storyContainer {
+        flex-direction: column;
+        row-gap: 30px;
+        margin: 20px 20px;
+    }
+
+    .storyDetails {
+        width: 100%;
+    }
+
+    .storyDetails h1 {
+        font-size: 25px;
+    }
+
+    .storyDetails p {
+        font-size: 16px;
+    }
+
+    .storyImage {
+        width: 100%;
+        height: 350px;
+    }
+}
+
+/* Booking Form Section Media Queries Started Here */
+@media screen and (max-width: 1400px) and (min-width: 901px){}
+
+@media screen and (max-width: 900px) and (min-width: 769px){}
+
+@media screen and (max-width: 768px) and (min-width: 481px){
+    .bookingHeadWrap h1 {
+        font-size: 30px;
+    }
+
+    .bookingHeadWrap p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) and (min-width: 280px){
+
+    .bookingWrap {
+        margin: 20px;
+    }
+
+    .bookingHeadWrap h1 {
+        font-size: 25px;
+    }
+
+    .bookingHeadWrap p {
+        font-size: 16px;
+    }
+
+    .formWrap input {
+        font-size: 10px;
+        padding: 8px 10px;
+    }
+
+    .bookingButtonWrap input {
+        font-size: 10px;
+    }
+}
+
+/* Footer Section Media Queries Started Here */
+@media screen and (max-width: 1400px) and (min-width: 901px){}
+
+@media screen and (max-width: 900px) and (min-width: 769px){
+
+    .companyLogoWrap a img {
+        width: 60px;
+    }
+
+    .companyLogoWrap a h3 {
+        font-size: 20px;
+    }
+
+    .companyDetails p {
+        font-size: 18px;
+    }
+
+    .companyContactWrap a svg {
+        height: 18px;
+        width: 18px;
+    }
+
+    .companyContactWrap a p {
+        font-size: 16px;
+    }
+
+    .copyrightWrap svg {
+        height: 20px;
+        width: 20px;
+    }
+
+    .copyrightWrap p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px){
+
+    .companyLogoWrap a img {
+        width: 60px;
+    }
+
+    .companyLogoWrap a h3 {
+        font-size: 20px;
+    }
+
+    .companyDetails p {
+        font-size: 18px;
+    }
+
+    .companyDetailsWrap {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .companyContactWrap a svg {
+        height: 18px;
+        width: 18px;
+    }
+
+    .companyContactWrap a p {
+        font-size: 16px;
+    }
+
+    .copyrightWrap svg {
+        height: 20px;
+        width: 20px;
+    }
+
+    .copyrightWrap p {
+        font-size: 18px;
+    }
+
+    .companyDetails {
+        width: 100%;
+    }
+
+    .companyContactWrap {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) and (min-width: 280px){
+
+    .footerWrap {
+        padding: 20px;
+    }
+
+    .companyLogoWrap a img {
+        width: 60px;
+    }
+
+    .companyLogoWrap a h3 {
+        font-size: 20px;
+    }
+
+    .companyDetails p {
+        font-size: 18px;
+    }
+
+    .companyDetailsWrap {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .companyContactWrap a svg {
+        height: 18px;
+        width: 18px;
+    }
+
+    .companyContactWrap a p {
+        font-size: 16px;
+    }
+
+    .copyrightWrap svg {
+        height: 20px;
+        width: 20px;
+    }
+
+    .copyrightWrap p {
+        font-size: 18px;
+    }
+
+    .companyDetails {
+        width: 100%;
+    }
+
+    .companyContactWrap {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 30px;
+    }
+}
